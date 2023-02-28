@@ -1,3 +1,3 @@
 # FPlike-exercise
  create a website
-link: https://github.com/ArishMada/FPlike-exercise
+link: https://arishmada.github.io/FPlike-exercise/
