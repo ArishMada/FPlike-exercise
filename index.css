@@ -15,14 +15,7 @@
   /*top nav bar*/
 .TopMenu {
     height: 60px;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(
-      90deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(0, 0, 0, 1) 100%,
-      rgba(0, 212, 255, 1) 100%
-    );
+    background-color: rgba(0, 0, 0, 0.9);
   }
   
   .TopMenu a {
@@ -31,7 +24,6 @@
     display: block;
     padding: 20px 18px;
     text-align: center;
-    font-family: Verdana, sans-serif;
   }
   
   .TopMenu li {
@@ -49,30 +41,30 @@
     background-color: white;
   }
   
-  .TopMenu .links {
-    display: inline;
+  .TopMenu:hover {
+    animation: topMenuAnimation 7s infinite;
   }
   
-  @media (max-width: 850px) {
-    .TopMenu .links {
-      height: 25rem;
-      width: 60%;
-      top: 0;
-      right: 0;
-      border-radius: 1.2rem;
-      display: none;
-      background-color: white;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+  @keyframes topMenuAnimation {
+    0% {
+      background-color: black;
     }
-    .TopMenu .links li {
-      font-size: 1.8rem;
-      margin: 0.5rem;
+    25% {
+      background-color: royalblue;
     }
-    .TopMenu .links li a {
-      color: #000;
+    50% {
+      background-color: gray;
     }
+    75% {
+      background-color: red;
+    }
+    100% {
+      background-color: black;
+    }
+  }
+  
+  .TopMenu ul {
+    display: inline;
   }
   
   .TopMenu h2 {
@@ -81,7 +73,12 @@
     font-size: 40px;
     padding-top: 18px;
     padding-left: 20px;
-    font-family: Verdana, sans-serif;
+  }
+  
+  @media (max-width: 850px) {
+    .TopMenu ul {
+      display: none;
+    }
   }
   
   .Colored2 {
